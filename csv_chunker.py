@@ -29,7 +29,7 @@ index = [int(i) for i in sys.argv[3].split(',')]
 
 ofile = open(sys.argv[2], "w")
 for line in lines:
-	values = line[:-1].split(',')
+	values = line.split(',')
 	for key in index:
 		ofile.write(values[key] + ',')
 	ofile.write('\n')

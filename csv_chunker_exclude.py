@@ -4,7 +4,7 @@
 Splits csv files into indexes
 
 Usage:
-csv_chunker.py <input.csv> <output.csv> <comma seperated indexes e.g., 0,2,4>
+csv_chunker_exclude.py <input.csv> <output.csv> <comma seperated indexes e.g., 0,2,4 to exclude>
 
 Last Updated:
 8 June 2017
