@@ -12,7 +12,6 @@ Last Updated:
 
 import sys
 
-print (sys.argv)
 
 
 file = open(sys.argv[1]).read()
@@ -29,12 +28,15 @@ index = [int(i) for i in sys.argv[3].split(',')]
 
 ofile = open(sys.argv[2], "w")
 for line in lines:
-	values = line[:-1].split(',')
-	for key in index:
+	values = line.split(',')
+	for key in xrange(len(values)):
+		if key in index:
+			continue
 		ofile.write(values[key] + ',')
 	ofile.write('\n')
 
 ofile.close()
+
 
 if len(sys.argv) > 4:
 	for line in open(sys.argv[2]).readlines():
